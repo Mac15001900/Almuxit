@@ -7,7 +7,6 @@ const DOM = {
   input: document.querySelector('#textInput'),
   exampleButton: document.querySelector('#exampleButton'),
   exampleInput: document.querySelector('#exampleInput'),
-  defaultBoard: new DrawingBoard.Board('default-board'),
 };
 
 var gs = {received:false, }; //GameState, this is shared with any player that joins the game
@@ -264,7 +263,7 @@ function receiveMessage(data, serverMember){
   }
 }
 
-//------Keypresses------
+//------Keyboard controls------
 
 window.addEventListener("keydown", function (event) {
   var code = parseFloat(event.keyCode);
